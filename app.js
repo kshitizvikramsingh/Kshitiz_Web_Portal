@@ -22,6 +22,9 @@ app.get("/problems",(req,res)=>{
 app.get("/homepage",(req,res)=>{
     res.render("homepage")
 })
+app.get("/amsa",(req,res)=>{
+    res.render("amsa")
+})
 app.listen(3000,()=>{
     console.log("Port is up on 3000!")
 })
