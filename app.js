@@ -4,7 +4,7 @@ const express= require("express")
 
 const app=express()
 
-const static_file=path.join(__dirname,'\public')
+const static_file=path.join(__dirname,'public')
 const views_dir=path.join(__dirname,'views')
 console.log(views_dir)
 
