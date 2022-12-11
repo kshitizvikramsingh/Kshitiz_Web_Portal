@@ -16,14 +16,11 @@ app.use(express.static(static_file))
 app.get("/",(req,res)=>{
     res.render('home')
 })
-app.get("/problems",(req,res)=>{
-    res.render("problems")
+app.get("/blog",(req,res)=>{
+    res.render("blog")
 })
-app.get("/homepage",(req,res)=>{
-    res.render("homepage")
-})
-app.get("/amsa",(req,res)=>{
-    res.render("amsa")
+app.get("/projects",(req,res)=>{
+    res.render("projects")
 })
 app.listen(3000,()=>{
     console.log("Port is up on 3000!")
