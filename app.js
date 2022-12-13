@@ -23,6 +23,6 @@ app.get("/projects",(req,res)=>{
     res.render("projects")
 })
 console.log(app.get(port))
-app.listen(port||3000,()=>{
+app.listen(port||3000|| '0.0.0.0',()=>{
     console.log(`port is up on ${port} or 3000`)
 })
