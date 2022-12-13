@@ -22,6 +22,9 @@ app.get("/blog",(req,res)=>{
 app.get("/projects",(req,res)=>{
     res.render("projects")
 })
+app.get("/certifications",(req,res)=>{
+    res.render("certifications")
+})
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })
