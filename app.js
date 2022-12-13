@@ -1,7 +1,7 @@
 const path= require("path")
 const ejs=require("ejs")
 const express= require("express")
-
+let port= process.env.PORT;
 const app=express()
 
 const static_file=path.join(__dirname,'public')
@@ -22,6 +22,7 @@ app.get("/blog",(req,res)=>{
 app.get("/projects",(req,res)=>{
     res.render("projects")
 })
-app.listen(3000,()=>{
-    console.log("Port is up on 3000!")
+console.log(app.get(port))
+app.listen(port||3000,()=>{
+    console.log(`port is up on ${port} or 3000`)
 })

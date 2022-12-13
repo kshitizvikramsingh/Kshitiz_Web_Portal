@@ -1,0 +1,11 @@
+body {
+    background-image: url("/img/blogs.jpg");
+    background-size:cover;
+}
+.row {
+    padding: 30px;
+}
+.card{
+    background-color: rgba(185, 66, 66, 0.274);
+    color: white;
+}
