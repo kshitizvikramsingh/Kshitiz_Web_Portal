@@ -6,6 +6,15 @@ body {
     padding: 30px;
 }
 .card{
-    background-color: rgba(185, 66, 66, 0.274);
+    background-color: rgba(0, 183, 255, 0.467);
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
     color: white;
+}
+
+.bread{
+    text-align: center;
 }
