@@ -25,6 +25,12 @@ app.get("/projects",(req,res)=>{
 app.get("/certifications",(req,res)=>{
     res.render("certifications")
 })
+app.get("/about",(req,res)=>{
+    res.render("about")
+})
+app.get("/feedback",(req,res)=>{
+    res.render("feedback")
+})
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })

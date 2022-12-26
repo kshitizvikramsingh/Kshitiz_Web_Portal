@@ -1,7 +1,26 @@
 h1 {
     text-align: center;
+    color: white;
 }
-
+body {
+    background-image: url("/img/stars.jpg");
+    background-size:cover;
+}
 footer {
     text-align: center;
+    color: white;
+}
+
+.card{
+    background-color: rgba(255, 248, 248, 0.077);
+    color: white;
+}
+
+.row {
+    padding:  10px;
+    
+}
+
+a{
+    color: whitesmoke;
 }
