@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/vpc_overview.css"> 
+    <script src="/js/jquery.js"></script> 
+    <script src="/js/bootstrap.min.js"></script>
+    <title>Ktz's Web Portal</title>
+</head>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/img/ktz_logo.png" alt="" width="38" height="30" class="d-inline-block align-text-top">
+            Kshitiz Vikram Singh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/blog">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/certifications">Certifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/feedback">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<body>
+<h1>AWS VPC Overview</h1>
+<div class="img_div">
+    <img src="img/subnets_content.jpg" class="img-fluid" alt="subnet architecture in AWS">
+</div>
+
+<div class="row">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">AWS VPC (Virtual Private Cloud)</h5>
+          <p class="card-text">It is a networking environment that can be setup in AWS cloud.
+            <br>A VPC can also be understood as a planet in a particular star system, in this case AWS.
+            <br>We can have multiple VPCs in an AWS region or in other words, multiple planets within a star system. In case of AWS, there is a soft limit of 5 VPCs per region.
+            <br>A VPC has two components:
+            <ul>
+                <li>Private Subnet or water bodies in a planet</li>
+                <li>Public Subnet or people connected to the Internet</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+</div>
+
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+              <h5 class="card-title">Private Subnet</h5>
+              <p class="card-text">It is a private network within a VPC that does not have access to the Internet and can communicate only with fellow EC2 instances within that private network.
+                <br>A Private subnet can also be understood as water bodies that also have life within but are restricted to their own communication channel and cannot communicate with people via their network i.e. the Internet directly.
+              </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+              <h5 class="card-title">Public Subnet</h5>
+              <p class="card-text">It is a network that has access to the Internet and thus, EC2 instances within it can be accessed by anyone connected to the internet
+                <br>A Public subnet can also be understood as a group of people that are connected to each other via one common network i.e. the Internet.
+              </p>
+        </div>
+    </div>
+</div>
+
+<div class="img_div">
+    <img src="img/vpc.png" class="img-fluid" alt="subnet architecture in AWS">
+    <p>A VPC basic architecture in AWS</p>
+</div>
+
+<div class="row">
+  <div class="card">
+      <div class="card-body">
+            <h5 class="card-title">Credits</h5>
+            <p class="card-text">Main image designed in <a href="https://app.creately.com" target="_blank">Creatly</a>
+              <br>Architecture diagram made in <a href="https://app.diagrams.net" target="_blank">diagrams</a>
+            </p>
+      </div>
+  </div>
+</div>
+</body>

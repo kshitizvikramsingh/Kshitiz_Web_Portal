@@ -31,8 +31,8 @@ app.get("/about",(req,res)=>{
 app.get("/feedback",(req,res)=>{
     res.render("feedback")
 })
-app.get("/subnets",(req,res)=>{
-    res.render("subnets")
+app.get("/vpc_overview",(req,res)=>{
+    res.render("vpc_overview")
 })
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
