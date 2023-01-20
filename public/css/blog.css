@@ -25,3 +25,17 @@ h2 {
 .bread{
     text-align: center;
 }
+
+footer{
+    position:relative;
+    top:auto;
+    bottom:0;
+    left:0; 
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+a{
+    color: aliceblue;
+}
