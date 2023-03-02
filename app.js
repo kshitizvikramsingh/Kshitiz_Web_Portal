@@ -1,7 +1,7 @@
 const path= require("path")
 const ejs=require("ejs")
 const express= require("express")
-const PORT= 443 || 80;
+const PORT= 80;
 const app=express()
 
 const static_file=path.join(__dirname,'public')
