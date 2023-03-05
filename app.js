@@ -34,6 +34,11 @@ app.get("/feedback",(req,res)=>{
 app.get("/vpc_overview",(req,res)=>{
     res.render("vpc_overview")
 })
+app.get("/aws_site-2-site",(req,res)=>{
+    res.render("aws_site-2-site")
+})
+
+
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })
