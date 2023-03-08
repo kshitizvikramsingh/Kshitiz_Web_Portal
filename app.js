@@ -12,6 +12,7 @@ app.set('view engine', 'ejs')
 app.set('views',views_dir)
 app.use(express.static(static_file))
 
+console.time("Server initialization time")
 
 app.get("/",(req,res)=>{
     res.render('home')
@@ -26,6 +27,7 @@ app.get("/certifications",(req,res)=>{
     res.render("certifications")
 })
 app.get("/about",(req,res)=>{
+    
     res.render("about")
 })
 app.get("/feedback",(req,res)=>{
@@ -42,3 +44,5 @@ app.get("/aws_site_to_site",(req,res)=>{
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })
+
+console.timeEnd("Server initialization time")

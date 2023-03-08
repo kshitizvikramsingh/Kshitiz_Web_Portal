@@ -1,0 +1,49 @@
+body {
+    background-image: url("/img/stars.jpg");
+    background-size:cover;
+    
+    
+}
+    
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+li {
+    color: whitesmoke;
+    text-align: center;
+}
+
+ul{
+    color: aliceblue;
+    text-shadow: 1px 2px 2px black;
+}
+.row {
+    padding:  30px;
+    
+}
+
+.card{
+    background-color: rgba(255, 248, 248, 0.077);
+    color: white;
+}
+
+footer{
+    position:relative;
+    top:auto;
+    bottom:0;
+    left:0; 
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+a{
+    color: aliceblue;
+}
