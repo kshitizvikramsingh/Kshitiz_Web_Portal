@@ -17,9 +17,6 @@ console.time("Server initialization time")
 app.get("/",(req,res)=>{
     res.render('home')
 })
-app.get("/blog",(req,res)=>{
-    res.render("blog")
-})
 app.get("/projects",(req,res)=>{
     res.render("projects")
 })
@@ -39,7 +36,19 @@ app.get("/vpc_overview",(req,res)=>{
 app.get("/aws_site_to_site",(req,res)=>{
     res.render("aws_site_to_site")
 })
+app.get("/blogs",(req,res)=>{
+    res.render("blogs")
+})
+app.get("/gen-blogs",(req,res)=>{
+    res.render("general-blogs.ejs")
+})
 
+app.get("/aws-blogs",(req,res)=>{
+    res.render("aws-blogs.ejs")
+})
+app.get("/project-management-blogs",(req,res)=>{
+    res.render("project-management-blogs.ejs")
+})
 
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
