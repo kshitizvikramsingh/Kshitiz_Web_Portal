@@ -49,6 +49,10 @@ app.get("/aws-blogs",(req,res)=>{
 app.get("/project-management-blogs",(req,res)=>{
     res.render("project-management-blogs.ejs")
 })
+app.get("/Innovators-DNA",(req,res)=>{
+    res.render("Innovators-DNA.ejs")
+})
+
 
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)

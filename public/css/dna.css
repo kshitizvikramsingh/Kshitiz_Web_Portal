@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(43, 41, 41);
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+.row {
+    padding: 10px;
+}
+.img_div{
+    text-align: center;
+    color: white;
+}
+.img-fluid {
+    width: 50rem;
+    height: 25rem;
+    
+}
+
+.card{
+    background-color: rgba(255, 248, 248, 0.077);
+    color: white;
+    text-align: left;
+}
+
+footer{
+    position:relative;
+    top:auto;
+    bottom:0;
+    left:0; 
+    width: 100%;
+    text-align: center;
+    color: white;
+}
