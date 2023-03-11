@@ -52,6 +52,9 @@ app.get("/project-management-blogs",(req,res)=>{
 app.get("/Innovators-DNA",(req,res)=>{
     res.render("Innovators-DNA.ejs")
 })
+app.get("/new-blog",(req,res)=>{
+    res.render("new-blog.ejs")
+})
 
 
 app.listen(PORT,()=>{
