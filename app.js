@@ -31,10 +31,10 @@ app.get("/feedback",(req,res)=>{
     res.render("feedback")
 })
 app.get("/vpc_overview",(req,res)=>{
-    res.render("vpc_overview")
+    res.render("vpc_overview.ejs")
 })
 app.get("/aws_site_to_site",(req,res)=>{
-    res.render("aws_site_to_site")
+    res.render("aws_site_to_site.ejs")
 })
 app.get("/blogs",(req,res)=>{
     res.render("blogs")
