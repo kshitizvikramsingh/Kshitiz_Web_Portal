@@ -1,6 +1,6 @@
 const fs= require('fs');
 
-let logger=fs.createWriteStream('C:/Users/ktz/Desktop/Kshitiz/Kshitiz_Web_Portal/views/new-blog.ejs')
+let logger=fs.createWriteStream('C:/Users/kshit/Desktop/Kshitiz/Kshitiz_Web_Portal/views/new-blog.ejs')
 
 logger.write('<html>\n')
 logger.write('<head>\n')
