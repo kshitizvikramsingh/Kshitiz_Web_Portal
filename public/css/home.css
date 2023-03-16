@@ -34,3 +34,12 @@ footer{
 a{
     color: aliceblue;
 }
+
+.dropdown-menu{
+    background-color: rgb(39, 37, 43);
+    color: aliceblue;
+}
+
+.dropdown-item{
+    color: aliceblue;
+}
