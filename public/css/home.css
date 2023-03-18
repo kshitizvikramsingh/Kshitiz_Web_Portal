@@ -43,3 +43,20 @@ a{
 .dropdown-item{
     color: aliceblue;
 }
+.navbar{
+    background-color: rgba(245, 232, 232, 0);
+    text-align: center;
+}
+.nav-link{
+    color: aliceblue;
+}
+.nav-link:hover{
+    color: aliceblue;
+}
+.navbar-toggler{
+    color: black;
+}
+.nav-link:visited{
+    color: white;
+    
+}
