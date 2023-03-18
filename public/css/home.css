@@ -60,3 +60,10 @@ a{
     color: white;
     
 }
+.navbar-toggler{
+    background-color: rgba(245, 232, 232, 0);
+}
+.navbar-toggler-icon{
+    
+    color: aliceblue;
+}
