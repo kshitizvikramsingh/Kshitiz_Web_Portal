@@ -33,3 +33,15 @@ footer{
     text-align: center;
     color: white;
 }
+
+div{
+    animation: scale 1s;
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}

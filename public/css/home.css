@@ -10,6 +10,7 @@ body {
 h1 {
     text-align: center;
     color: white;
+    font-size: 42px;
 }
 .row {
     padding:  30px;
@@ -69,4 +70,28 @@ a{
     
     width: 20px;
     
+}
+
+div{
+    animation: scale 1s;
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+h1{
+    animation: scale 2s;
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
 }

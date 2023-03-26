@@ -24,3 +24,15 @@ footer {
 a{
     color: whitesmoke;
 }
+
+div{
+    animation: scale 1s;
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
