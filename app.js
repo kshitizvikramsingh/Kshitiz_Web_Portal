@@ -59,6 +59,15 @@ app.get("/aws-direct-connect",(req,res)=>{
     res.render("aws-direct-connect.ejs")
 })
 
+app.get("/node-js-article",(req,res)=>{
+    res.render("Node-JS.ejs")
+})
+
+app.get("/node-articles",(req,res)=>{
+    res.render("node-articles.ejs")
+})
+
+
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })

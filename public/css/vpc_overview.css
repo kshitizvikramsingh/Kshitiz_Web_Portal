@@ -13,7 +13,8 @@ h1 {
     color: white;
 }
 .img-fluid {
-    width: 50rem;
+    width: fit-content;
+    height: fit-content;
     
 }
 
