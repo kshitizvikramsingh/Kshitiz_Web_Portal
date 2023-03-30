@@ -49,17 +49,12 @@
     <h1>Feedback for the portal 🔁</h1>
     <p><b>Please leave your thoughts below, that would be really appreciated! 😊</b></p>
 
-    <form id = "form" action="/feedback" method="post">
-      <div class="form-floating mb-1">
-        <input type="text" class="form-control" id="floatingInput" placeholder="Your Name" name="name">
-        <label for="floatingInput">Your Name</label>
-      </div>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="floatingInput" placeholder="Your Comment" name="comment">
-        <label for="floatingInput">Your Comment</label>
-      </div>
-      
-      <button type="button" class="btn btn-primary">Submit!</button>
+    <form method="post" action="/feedback">
+      <label for="name-field">Enter your name</label>
+      <input type="text" name="name" id="name-field">
+      <label for="comment-field">Enter your comment</label>
+      <input type="text-area" name="comment" id="comment-field">
+      <button>Submit!</button>
     </form>
     <p id ="tt"><b>The comments are shown below:</b></p>
     <ul id="comment-list">

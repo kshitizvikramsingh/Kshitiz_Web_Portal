@@ -48,7 +48,7 @@ app.get("/about",(req,res)=>{
 })
 app.get("/feedback",async (req,res)=>{
      const comments=await Comment.find({})
-    console.log(comments)
+    //console.log(comments)
     res.render("feedback",{comments})
 })
 app.get("/vpc_overview",(req,res)=>{
@@ -92,10 +92,8 @@ app.get("/comments",(req,res)=>{
 })
 app.post("/feedback",async(req,res)=>{
     let data=req.body;
-    console.log(req.body)
-    console.log(req.body.name)
-    console.log(req.body.comment)
-    const newComment= new Comment(req.body)
+    console.log(data)
+    const newComment= new Comment(data)
     await newComment.save()
     res.redirect("/feedback")
     
