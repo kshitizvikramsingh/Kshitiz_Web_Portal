@@ -1,6 +1,7 @@
 body {
     background-image: url("/img/blogs.jpg");
     background-size:cover;
+    font-family: "Century Gothic";
 }
 .row {
     padding: 30px;
@@ -8,13 +9,13 @@ body {
 .card{
     background-color: rgba(0, 132, 255, 0.74);
     color: rgb(255, 255, 255);
-    text-shadow: 1px 6px 6px black;
+    text-shadow: 15px 15px 15px black;
 }
 
 h1 {
     text-align: center;
     color: white;
-    text-shadow: 1px 6px 6px black;
+    text-shadow: 15px 15px 15px black;
 }
 
 

@@ -1,7 +1,8 @@
 body {
     background-image: url("/img/stars.jpg");
     background-size:cover;
-    
+    font-family: "Century Gothic";
+    text-shadow: 15px 15px 15px black;
     
 }
     
