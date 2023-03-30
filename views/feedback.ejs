@@ -46,10 +46,28 @@
     </div>
   </nav>
     
-    <h1>Build in progress ⚒️</h1>
+    <h1>Feedback for the portal 🔁</h1>
+    <p><b>Please leave your thoughts below, that would be really appreciated! 😊</b></p>
 
-    <button type="button" class="btn btn-primary" id="btn">Test Button</button>
-    <a href="/blogs" class="btn btn-primary">View Blogs</a>
+    <form id = "form" action="/feedback" method="post">
+      <div class="form-floating mb-1">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Your Name" name="name">
+        <label for="floatingInput">Your Name</label>
+      </div>
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Your Comment" name="comment">
+        <label for="floatingInput">Your Comment</label>
+      </div>
+      
+      <button type="button" class="btn btn-primary">Submit!</button>
+    </form>
+    <p id ="tt"><b>The comments are shown below:</b></p>
+    <ul id="comment-list">
+      <% for(var i=0; i<comments.length; i++) {%>
+      <li><%= comments[i].name %>-<%= comments[i].comment %><hr></li>
+      
+      <% } %>
+      </ul>
     <footer> 
       Reach out to me on:
       <a href="https://www.linkedin.com/in/kshitiz-vikram-singh-67a702268/" target="_blank">LinkedIn</a> <a target="_blank" href="https://instagram.com/ktz_vs">Instagram</a>

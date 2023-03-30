@@ -1,12 +1,31 @@
 const path= require("path")
+const fs= require('fs');
 const ejs=require("ejs")
 const express= require("express")
 const PORT= 80;
 const app=express()
+const mongoose=require("mongoose")
+const Comment=require("./models/comments")
+
+mongoose.connect('mongodb://127.0.0.1:27017/Comments')
+    .then(()=>{
+        console.log("Mongoose connection estabilished")
+    })
+    .catch(()=>{
+        console.log("OOPS There is a mongoose error")
+    })
+
+
+    
 
 const static_file=path.join(__dirname,'public')
 const views_dir=path.join(__dirname,'views')
 console.log(views_dir)
+
+app.use(express.json()) // for parsing application/json
+app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+
+
 
 app.set('view engine', 'ejs')
 app.set('views',views_dir)
@@ -27,8 +46,10 @@ app.get("/about",(req,res)=>{
     
     res.render("about")
 })
-app.get("/feedback",(req,res)=>{
-    res.render("feedback")
+app.get("/feedback",async (req,res)=>{
+     const comments=await Comment.find({})
+    console.log(comments)
+    res.render("feedback",{comments})
 })
 app.get("/vpc_overview",(req,res)=>{
     res.render("vpc_overview.ejs")
@@ -66,7 +87,19 @@ app.get("/node-js-article",(req,res)=>{
 app.get("/node-articles",(req,res)=>{
     res.render("node-articles.ejs")
 })
-
+app.get("/comments",(req,res)=>{
+    res.render("comments.ejs")
+})
+app.post("/feedback",async(req,res)=>{
+    let data=req.body;
+    console.log(req.body)
+    console.log(req.body.name)
+    console.log(req.body.comment)
+    const newComment= new Comment(req.body)
+    await newComment.save()
+    res.redirect("/feedback")
+    
+})
 
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)

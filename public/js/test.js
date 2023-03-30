@@ -1,17 +1,17 @@
+
 const buttons=document.querySelectorAll(".btn");
 const dropDown=document.querySelector("#navbarDropdown")
+const textBox=document.querySelector("input");
+const commentButton=document.querySelector("#comment-button");
+
 console.log("script is loaded");
 
-for(let i=0;i<buttons.length;i++){
-    buttons[i].addEventListener("mouseenter",()=>{
-        buttons[i].classList="btn btn-danger"
-    })
-    
-    buttons[i].addEventListener("mouseout",()=>{
-        buttons[i].classList="btn btn-primary"
-    })
-}
-
-dropDown.addEventListener("mouseenter",()=>{
-    display="true"
+commentButton.addEventListener("click",()=>{
+    let data=textBox.value;
+    console.log(data);
+    const p=document.createElement("p");
+    p.textContent=data;
+    p.style.color="white";
+    document.body.appendChild(p);
 })
+
