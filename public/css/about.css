@@ -3,6 +3,7 @@ body {
     background-size:cover;
     font-family: "Century Gothic";
     text-shadow: 15px 15px 15px black;
+    text-align: center;
     
 }
     
@@ -59,4 +60,7 @@ div{
     to{
         transform: scale(100%);
     }
+}
+#space-div{
+    width: 25px;
 }
