@@ -5,15 +5,11 @@ body {
     background-size:cover;
     font-family: "Century Gothic";
     text-shadow: 15px 15px 15px black;
-    
-}
-    
-h1 {
     text-align: center;
-    color: white;
-    font-size: 42px;
-    text-shadow: 1px 1px 2px black, 0px 0px 25px blue, 0px 0px 25px rgb(109, 171, 187);
+    
 }
+    
+
 .row {
     padding:  30px;
     
@@ -77,7 +73,8 @@ a{
 }
 
 div{
-    animation: scale 1s;
+    animation: slideUp 1s;
+    
 }
 @keyframes scale {
     from{
@@ -89,7 +86,9 @@ div{
 }
 
 h1{
-    animation: scale 2s;
+    animation: slideUp 1s;
+    text-align: center;
+    color: aliceblue;
 }
 @keyframes scale {
     from{
@@ -99,6 +98,35 @@ h1{
         transform: scale(100%);
     }
 }
+
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
 .dropdown:hover .dropdown-menu{
     display:block;
+    text-align: center;
+}
+ 
+#special{
+    text-align: center;
+    color:blue;
+    display:block
+    
+}
+.img-fluid{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  clip-path: circle();
+    width:15rem
+    
+    
 }
