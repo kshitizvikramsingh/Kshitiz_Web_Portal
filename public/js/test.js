@@ -1,17 +1,39 @@
+const button = document.querySelector("#counter");
+const heading=document.getElementById("heading");
+const certNumber= document.createElement('h2')
+document.querySelector("#heading").append(certNumber)
+const artNumber= document.createElement('h2')
+document.querySelector("#heading").appendChild(artNumber)
 
-const buttons=document.querySelectorAll(".btn");
-const dropDown=document.querySelector("#navbarDropdown")
-const textBox=document.querySelector("input");
-const commentButton=document.querySelector("#comment-button");
 
-console.log("script is loaded");
+const sleep= (t) =>{
+    return new Promise((resolve)=>{
+        return setTimeout(()=>{
+            resolve()
+        }, t)
+    })
+}
 
-commentButton.addEventListener("click",()=>{
-    let data=textBox.value;
-    console.log(data);
-    const p=document.createElement("p");
-    p.textContent=data;
-    p.style.color="white";
-    document.body.appendChild(p);
+
+button.addEventListener("click",async()=>{
+  // certNumber.scrollIntoView()
+  for (let i = 0; i <= 4; i++){
+    await sleep(100)
+    certNumber.textContent=`${i} + projects ⚒️`
+    
+    console.log(i)
+  }
+  
 })
 
+button.addEventListener("click",async()=>{
+  // certNumber.scrollIntoView()
+  for (let i = 0; i <= 10; i++){
+    await sleep(100)
+    artNumber.textContent=`${i} + articles 📃`
+    
+    
+    
+  }
+  
+})

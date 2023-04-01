@@ -33,6 +33,10 @@ app.use(express.static(static_file))
 
 console.time("Server initialization time")
 
+app.get("/test",(req,res)=>{
+    res.render("test")
+})
+
 app.get("/",(req,res)=>{
     res.render('home')
 })
@@ -52,10 +56,10 @@ app.get("/feedback",async (req,res)=>{
     res.render("feedback",{comments})
 })
 app.get("/vpc_overview",(req,res)=>{
-    res.render("vpc_overview.ejs")
+    res.render("articles/vpc_overview.ejs")
 })
 app.get("/aws_site_to_site",(req,res)=>{
-    res.render("aws_site_to_site.ejs")
+    res.render("articles/aws_site_to_site.ejs")
 })
 app.get("/blogs",(req,res)=>{
     res.render("blogs")
@@ -71,17 +75,17 @@ app.get("/project-management-blogs",(req,res)=>{
     res.render("project-management-blogs.ejs")
 })
 app.get("/Innovators-DNA",(req,res)=>{
-    res.render("Innovators-DNA.ejs")
+    res.render("articles/Innovators-DNA.ejs")
 })
 app.get("/blog",(req,res)=>{
     res.render("blog.ejs")
 })
 app.get("/aws-direct-connect",(req,res)=>{
-    res.render("aws-direct-connect.ejs")
+    res.render("articles/aws-direct-connect.ejs")
 })
 
 app.get("/node-js-article",(req,res)=>{
-    res.render("Node-JS.ejs")
+    res.render("articles/Node-JS.ejs")
 })
 
 app.get("/node-articles",(req,res)=>{
