@@ -6,6 +6,7 @@ const PORT= 80;
 const app=express()
 const mongoose=require("mongoose")
 const Comment=require("./models/comments")
+const t0=performance.now()
 
 mongoose.connect('mongodb://127.0.0.1:27017/Comments')
     .then(()=>{
@@ -31,7 +32,7 @@ app.set('view engine', 'ejs')
 app.set('views',views_dir)
 app.use(express.static(static_file))
 
-console.time("Server initialization time")
+
 
 app.get("/test",(req,res)=>{
     res.render("test")
@@ -48,7 +49,7 @@ app.get("/certifications",(req,res)=>{
 })
 app.get("/about",(req,res)=>{
     
-    res.render("about")
+    res.render("about",{tav})
 })
 app.get("/feedback",async (req,res)=>{
      const comments=await Comment.find({})
@@ -107,4 +108,5 @@ app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })
 
-console.timeEnd("Server initialization time")
+const t1=performance.now()
+let tav=t1-t0
