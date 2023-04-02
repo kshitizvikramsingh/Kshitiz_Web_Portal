@@ -15,10 +15,11 @@ const sleep= (t) =>{
 }
 
 
-button.addEventListener("click",async()=>{
+document.addEventListener("DOMContentLoaded",async()=>{
   // certNumber.scrollIntoView()
   for (let i = 0; i <= 4; i++){
     await sleep(100)
+    
     certNumber.textContent=`${i} + projects ⚒️`
     
     console.log(i)
@@ -26,7 +27,7 @@ button.addEventListener("click",async()=>{
   
 })
 
-button.addEventListener("click",async()=>{
+document.addEventListener("DOMContentLoaded",async()=>{
   // certNumber.scrollIntoView()
   for (let i = 0; i <= 10; i++){
     await sleep(100)
