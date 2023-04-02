@@ -82,7 +82,7 @@ app.get("/blog",(req,res)=>{
     res.render("blog.ejs")
 })
 app.get("/aws-direct-connect",(req,res)=>{
-    res.render("articles/aws-direct-connect.ejs")
+    res.render("articles/direct-connect.ejs")
 })
 
 app.get("/node-js-article",(req,res)=>{
