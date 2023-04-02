@@ -18,7 +18,7 @@ const sleep= (t) =>{
 document.addEventListener("DOMContentLoaded",async()=>{
   // certNumber.scrollIntoView()
   for (let i = 0; i <= 4; i++){
-    await sleep(100)
+    await sleep(250)
     
     certNumber.textContent=`${i} + projects ⚒️`
     
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded",async()=>{
 document.addEventListener("DOMContentLoaded",async()=>{
   // certNumber.scrollIntoView()
   for (let i = 0; i <= 10; i++){
-    await sleep(100)
+    await sleep(200)
     artNumber.textContent=`${i} + articles 📃`
     
     
