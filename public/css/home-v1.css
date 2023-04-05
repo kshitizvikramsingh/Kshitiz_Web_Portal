@@ -1,0 +1,104 @@
+
+
+body {
+    background-image: url("/img/stars.jpg");
+    background-size:cover;
+    font-family: "Century Gothic";
+    text-shadow: 15px 15px 15px black;
+    
+}
+    
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    text-shadow: 1px 1px 2px black, 0px 0px 25px blue, 0px 0px 25px rgb(109, 171, 187);
+}
+.row {
+    padding:  30px;
+    
+}
+
+.card{
+    background-color: rgba(255, 248, 248, 0.077);
+    color: white;
+    box-shadow: 10px 10px 15px rgba(173, 216, 230, 0.205);
+    border-radius: 30px;
+}
+
+footer{
+    position:relative;
+    top:auto;
+    bottom:0;
+    left:0; 
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+a{
+    color: aliceblue;
+}
+
+.dropdown-menu{
+    background-color: rgba(39, 37, 43, 0.884);
+    color: aliceblue;
+}
+
+.dropdown-item{
+    color: aliceblue;
+}
+.navbar{
+    background-color: rgba(245, 232, 232, 0);
+    text-align: center;
+}
+.nav-link{
+    color: aliceblue;
+}
+.nav-link:hover{
+    color: aliceblue;
+}
+.navbar-toggler{
+    color: black;
+}
+.nav-link:visited{
+    color: white;
+    
+}
+.navbar-toggler{
+    background-color: rgba(245, 232, 232, 0);
+    
+}
+.nav-icon{
+    
+    
+    width: 20px;
+    
+}
+
+div{
+    animation: scale 1s;
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+h1{
+    animation: scale 2s;
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
