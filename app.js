@@ -6,6 +6,7 @@ const PORT= 80;
 const app=express()
 const mongoose=require("mongoose")
 const Comment=require("./models/comments")
+const ipData=require("./public/js/ip-json.js")
 const t0=performance.now()
 
 mongoose.connect('mongodb://127.0.0.1:27017/Comments')
@@ -95,6 +96,30 @@ app.get("/node-articles",(req,res)=>{
 app.get("/comments",(req,res)=>{
     res.render("comments.ejs")
 })
+app.get("/transit-gateway",(req,res)=>{
+    res.render("articles/transit-gateway")
+})
+
+app.get("/ip-locator",(req,res)=>{
+    res.render("ip-locator")
+
+
+})
+app.post("/data",(req,res)=>{
+    //console.log(req.body.ip)
+    const ip=req.body.ip
+    ipData(ip,(error,data)=>{
+        const ip=data.ip
+        const region=data.region
+        const country=data.country
+        const timezone=data.timezone
+        const provider=data.org
+        res.render("result",{ip,region,country,timezone,provider})
+    })
+    
+})
+
+
 app.post("/feedback",async(req,res)=>{
     let data=req.body;
     console.log(data)

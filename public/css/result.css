@@ -1,0 +1,133 @@
+
+
+body {
+    background-image: url("/img/stars.jpg");
+    background-size:cover;
+    font-family: "Century Gothic";
+    text-shadow: 15px 15px 15px black;
+    text-align: center;
+    color: aliceblue;
+    
+}
+    
+
+.row {
+    padding:  30px;
+    
+}
+
+.card{
+    background-color: rgba(255, 248, 248, 0.077);
+    color: white;
+    box-shadow: 10px 10px 15px rgba(173, 216, 230, 0.205);
+    border-radius: 30px;
+}
+
+footer{
+    position:relative;
+    top:auto;
+    bottom:0;
+    left:0; 
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+a{
+    color: aliceblue;
+}
+
+.dropdown-menu{
+    background-color: rgba(39, 37, 43, 0.884);
+    color: aliceblue;
+}
+
+.dropdown-item{
+    color: aliceblue;
+}
+.navbar{
+    background-color: rgba(245, 232, 232, 0);
+    text-align: center;
+}
+.nav-link{
+    color: aliceblue;
+}
+.nav-link:hover{
+    color: aliceblue;
+}
+.navbar-toggler{
+    color: black;
+}
+.nav-link:visited{
+    color: white;
+    
+}
+.navbar-toggler{
+    background-color: rgba(245, 232, 232, 0);
+    
+}
+.nav-icon{
+    
+    
+    width: 20px;
+    
+}
+
+div{
+    animation: slideUp 1s;
+    
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+h1{
+    animation: slideUp 1s;
+    text-align: center;
+    color: aliceblue;
+}
+@keyframes scale {
+    from{
+        transform: scale(0%);
+    }
+    to{
+        transform: scale(100%);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+    text-align: center;
+}
+ 
+#special{
+    text-align: center;
+    color:blue;
+    display:block
+    
+}
+.img-fluid{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  clip-path: circle();
+    width:15rem
+    
+    
+}

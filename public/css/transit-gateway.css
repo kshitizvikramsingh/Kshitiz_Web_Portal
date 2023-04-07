@@ -1,0 +1,15 @@
+body {
+     
+    background-color: rgb(43, 41, 41);
+    color: aliceblue;
+}
+h1{
+    text-align: center;
+
+}
+
+.card{
+ padding: 10px 10px 10px 10px;
+ background-color: rgba(255, 248, 248, 0.077);
+ color: white;
+}
