@@ -2,6 +2,7 @@ body {
      
     background-color: rgb(43, 41, 41);
     color: aliceblue;
+    
 }
 h1{
     text-align: center;
@@ -12,4 +13,13 @@ h1{
  padding: 10px 10px 10px 10px;
  background-color: rgba(255, 248, 248, 0.077);
  color: white;
+ display: flex;
+ align-items: center;
+}
+div{
+    display:flex;
+}
+.img-fluid{
+    text-align: center;
+    
 }
