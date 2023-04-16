@@ -90,8 +90,8 @@ app.get("/node-js-article",(req,res)=>{
     res.render("articles/Node-JS.ejs")
 })
 
-app.get("/node-articles",(req,res)=>{
-    res.render("node-articles.ejs")
+app.get("/programming-articles",(req,res)=>{
+    res.render("programming-articles.ejs")
 })
 app.get("/comments",(req,res)=>{
     res.render("comments.ejs")
