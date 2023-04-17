@@ -1,6 +1,7 @@
 body {
     background-color: rgb(49, 46, 46);
     background-size:cover;
+    text-align: center;
 }
 .row {
     padding: 30px;
@@ -50,4 +51,14 @@ div{
     to{
         transform: scale(100%);
     }
+}
+
+.d-block w-25{
+    text-align: center;
+}
+
+a{
+    color:rgb(17, 62, 211);
+    text-shadow: 100px black;
+    
 }
