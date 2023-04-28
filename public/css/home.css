@@ -1,9 +1,10 @@
 
 
 body {
-    background-image: url("/img/stars.jpg");
+    /* background-image: url("/img/stars.jpg"); */
+    background-color: rgb(73, 70, 70);
     background-size:cover;
-    font-family: "Century Gothic";
+    font-family: "Roboto";
     text-shadow: 15px 15px 15px black;
     text-align: center;
     
@@ -129,4 +130,10 @@ h1{
     width:15rem
     
     
+}
+#logo{
+    width: 120px;
+}
+#logos{
+    width: 150px;
 }

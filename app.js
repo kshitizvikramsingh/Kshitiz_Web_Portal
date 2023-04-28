@@ -99,7 +99,9 @@ app.get("/comments",(req,res)=>{
 app.get("/transit-gateway",(req,res)=>{
     res.render("articles/transit-gateway")
 })
-
+app.get("/route-53",(req,res)=>{
+    res.render("articles/route-53")
+})
 app.get("/ip-locator",(req,res)=>{
     res.render("ip-locator")
 
