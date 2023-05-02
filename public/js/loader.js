@@ -14,7 +14,7 @@ document.onreadystatechange = function () {
         setTimeout(function(){
             
            document.getElementById('loader').style.display="none";
-        },5000);
+        },2000);
     }
   }
 
