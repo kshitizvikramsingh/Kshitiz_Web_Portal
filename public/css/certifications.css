@@ -41,8 +41,8 @@ div{
     }
 }
 #loader{
-    width: 100px;
-    height: 100px;
+    width: 25px;
+    height: 25px;
     
     
     position: absolute;
@@ -52,5 +52,8 @@ div{
     right: 0;
     
     margin: auto;
-    text-align: center;
+    
+}
+#loader img{
+    width: 250px
 }
