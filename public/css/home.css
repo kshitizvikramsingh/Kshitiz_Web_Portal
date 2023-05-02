@@ -138,11 +138,10 @@ h1{
     width: 150px;
 }
 #loader{
-    width: 100px;
-    height: 100px;
     
     
-    position: absolute;
+    
+   
     top:0;
     bottom: 0;
     left: 0;
@@ -150,4 +149,8 @@ h1{
     
     margin: auto;
     text-align: center;
+}
+#loader img{
+    width: 100px;
+    
 }
