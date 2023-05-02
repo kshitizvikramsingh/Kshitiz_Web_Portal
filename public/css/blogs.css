@@ -52,3 +52,17 @@ h1 {
     color: white;
     text-shadow: 1px 1px 2px black, 0px 0px 25px blue, 0px 0px 25px rgb(76, 0, 255);
 }
+#loader{
+    width: 100px;
+    height: 100px;
+    
+    
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+    text-align: center;
+}
