@@ -1,0 +1,10 @@
+body{
+    color: aliceblue;
+    background-color: black;
+}
+h1{
+    text-align: center;
+}
+.navbar a {
+    color: aliceblue;
+}

@@ -1,12 +1,14 @@
 const path= require("path")
 const fs= require('fs');
 const ejs=require("ejs")
+const request=require("request")
 const express= require("express")
 const PORT= 80;
 const app=express()
 const mongoose=require("mongoose")
 const Comment=require("./models/comments")
 const ipData=require("./public/js/ip-json.js")
+const weather=require("./public/js/weather.js")
 const t0=performance.now()
 
 mongoose.connect('mongodb://127.0.0.1:27017/Comments')
@@ -107,6 +109,11 @@ app.get("/ip-locator",(req,res)=>{
 
 
 })
+app.get("/weather",(req,res)=>{
+    res.render("weather")
+
+
+})
 app.post("/data",(req,res)=>{
     //console.log(req.body.ip)
     const ip=req.body.ip
@@ -120,8 +127,20 @@ app.post("/data",(req,res)=>{
     })
     
 })
+app.post("/weather",(req,res)=>{
+    let locationName=req.body.location;
+    console.log(locationName)
+    weather(locationName,(err,data)=>{
+       let query=data.request.query
+       let status=data.current.weather_descriptions
+       let temp=data.current.temperature
+       let humidity=data.current.humidity
+       console.log(humidity)
+        res.render("weather-result",{query,temp,status,humidity})
+    })
+  
 
-
+})
 app.post("/feedback",async(req,res)=>{
     let data=req.body;
     console.log(data)

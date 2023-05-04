@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/home.css"> 
+    <link rel="stylesheet" href="/css/result.css"> 
     <link rel="icon" href="/img/my_web_logo.png">
     <script src="/js/jquery.js"></script> 
     <script src="/js/bootstrap.min.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6563240697864521"
-     crossorigin="anonymous"></script>
     <title>Ktz's Web Portal</title>
 </head>
 <nav class="navbar   navbar-expand-lg ">
@@ -42,32 +39,22 @@
           <li class="nav-item">
             <a class="nav-link" href="/feedback">Feedback</a>
           </li>
-          
-            <li class="nav-item">
-                <a class="nav-link" href="/ip-locator">Find any IP Info!</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/weather">Weather App</a>
-              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/weather">Weather App</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-<body>
-  <div id="loader"><progress></progress><img src="/img/load.gif" alt=""></div>
-  <div class="container">
-    <div class="row align-items-start">
-      <div class="col">
-        <h1>Welcome to IP Locator Web App</h1>
-    <form method="post" action="/data">
-        
-        <input type="text" class="form-control" aria-describedby="basic-addon1"placeholder="Enter an IP Address" name="ip">
-        <button class="btn btn-primary btn-lg">Send!</button>
-    </form>
-      </div>
-    </div>
-  </div>
+  <body>
+
+
+    <h1 id="ip">Location searched: <b><%= query %> </b></h1>
+    <h2>Current temperature is:<b><%= temp %> degree C</b></h2>
+    <h2>Feels like:<b><%= status[0]%></b></h2>
+    <h2>Humidity: <%= humidity %>%</h2>
     
-</body>
-<script src="/js/loader.js"></script>
-</html>
+    <a href="/weather"><button type="button" class="btn btn-primary btn-lg">Search Again!</button></a>
+
+  </body>
+  </html>

@@ -123,11 +123,8 @@ h1{
     
 }
 .img-fluid{
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  clip-path: circle();
-    width:15rem
+    display: cover;
+    width: stretch;
     
     
 }
