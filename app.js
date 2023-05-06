@@ -111,36 +111,39 @@ app.get("/ip-locator",(req,res)=>{
 })
 app.get("/weather",(req,res)=>{
     res.render("weather")
+})
+app.get("/weathers",(req,res)=>{
+    let locationName=req.query.location;
+    console.log(locationName)
+    weather(locationName,(err,data)=>{
+        if(err){
+            res.send({err})
+        }
+        else {
+            
+            res.send(data)
+        }
+       
+    })
+    
 
 
 })
-app.post("/data",(req,res)=>{
+app.get("/data",(req,res)=>{
     //console.log(req.body.ip)
-    const ip=req.body.ip
+    let ip=req.query.ip
     ipData(ip,(error,data)=>{
-        const ip=data.ip
-        const region=data.region
-        const country=data.country
-        const timezone=data.timezone
-        const provider=data.org
-        res.render("result",{ip,region,country,timezone,provider})
+        if(error){
+            res.send(error)
+        }
+        else{
+            res.send(data)
+        }
+       
     })
     
 })
-app.post("/weather",(req,res)=>{
-    let locationName=req.body.location;
-    console.log(locationName)
-    weather(locationName,(err,data)=>{
-       let query=data.request.query
-       let status=data.current.weather_descriptions
-       let temp=data.current.temperature
-       let humidity=data.current.humidity
-       console.log(humidity)
-        res.render("weather-result",{query,temp,status,humidity})
-    })
-  
 
-})
 app.post("/feedback",async(req,res)=>{
     let data=req.body;
     console.log(data)

@@ -91,14 +91,7 @@ h1{
     text-align: center;
     color: aliceblue;
 }
-@keyframes scale {
-    from{
-        transform: scale(0%);
-    }
-    to{
-        transform: scale(100%);
-    }
-}
+
 
 @keyframes slideUp {
     0% {
@@ -122,12 +115,9 @@ h1{
     display:block
     
 }
-.img-fluid{
-    display: cover;
-    width: stretch;
-    
-    
-}
+
+
+
 #logo{
     width: 120px;
 }
@@ -150,4 +140,7 @@ h1{
 #loader img{
     width: 100px;
     
+}
+p{
+    color: aliceblue;
 }

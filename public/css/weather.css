@@ -8,3 +8,6 @@ h1{
 .navbar a {
     color: aliceblue;
 }
+.nav-icon{
+    width: 20px;
+}
