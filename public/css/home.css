@@ -143,4 +143,8 @@ h1{
 }
 p{
     color: aliceblue;
+    text-align: center;
+}
+p img{
+    text-align: center;
 }
