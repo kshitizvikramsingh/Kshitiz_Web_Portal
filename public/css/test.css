@@ -1,0 +1,21 @@
+#container{
+    border: 5px solid black;
+    color: black;
+    display:flex;
+    justify-content:center;
+    height:45vh;
+    align-items: center;
+    
+}
+.element{
+    width:120px;
+    height:120px;
+    background-color: red;
+    border:2px solid black;
+    margin:10px;
+    align-items: center;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}

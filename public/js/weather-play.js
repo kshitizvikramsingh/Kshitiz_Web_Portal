@@ -12,10 +12,12 @@ form.addEventListener("submit",(error)=>{
     img.src="/img/spinner.svg"
     p.appendChild(img)
 
-    fetch("/weathers?location="+ search.value).then((res)=>{
-        res.json().then((data)=>{
+    fetch("/weathers?location="+ search.value)
+    .then((res)=>{
+        res.json()
+        .then((data)=>{
             console.log(data) 
-            p.textContent="Location searched for: "+data.location.name +", "+data.location.country+"."
+            p.textContent="Location searched for: "+data.location.name +", "+data.location.country+".\n"
             p.textContent+=" "+"Temperature is: "+data.current.temperature+ " degress Celcius."
         })
     })

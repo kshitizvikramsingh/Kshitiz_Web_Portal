@@ -1,6 +1,6 @@
 body{
     color: aliceblue;
-    background-color: black;
+    background-color: #3f3f3f;
     text-align: center;
 }
 h1{
@@ -11,4 +11,24 @@ h1{
 }
 .nav-icon{
     width: 20px;
+}
+button{
+    margin-top: 10px;
+}
+p{
+    margin-top: 10px;
+}
+#container{
+     /* border: 2px solid black;  */
+    
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    align-items: end;
+}
+#child-container img{
+    max-width: 100%;
+}
+p img{
+    width:50px
 }

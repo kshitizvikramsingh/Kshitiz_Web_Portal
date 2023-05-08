@@ -152,7 +152,9 @@ app.post("/feedback",async(req,res)=>{
     res.redirect("/feedback")
     
 })
-
+app.get("/test",(req,res)=>{
+    res.render("test")
+})
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })

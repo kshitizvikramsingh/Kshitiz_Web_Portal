@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded",async()=>{
 
 document.addEventListener("DOMContentLoaded",async()=>{
   // certNumber.scrollIntoView()
-  for (let i = 0; i <= 10; i++){
+  for (let i = 0; i <= 15; i++){
     await sleep(200)
     artNumber.textContent=`${i} + articles 📃`
     
