@@ -59,6 +59,13 @@
       <input type="text-area" name="comment" id="comment-field">
       <button class="btn btn-primary">Submit!</button>
     </form>
+    <hr>
+    <form id="form" method="post" action="/delete">
+      <label for="delete-field">Enter comment to delete:</label>
+      <input type="text" name="comment" id="delete-field">
+      
+      <button class="btn btn-primary">Submit!</button>
+    </form>
     <p id ="tt"><b>The comments are shown below:</b></p>
     <ul id="comment-list">
       <% for(let i=0; i<comments.length; i++) {%>

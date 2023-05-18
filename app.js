@@ -3,7 +3,7 @@ const fs= require('fs');
 const ejs=require("ejs")
 const request=require("request")
 const express= require("express")
-const PORT= 80;
+const PORT= 3000;
 const app=express()
 const mongoose=require("mongoose")
 const Comment=require("./models/comments")
@@ -141,9 +141,20 @@ app.get("/data",(req,res)=>{
 
 app.post("/feedback",async(req,res)=>{
     let data=req.body;
-    console.log(data)
-    const newComment= new Comment(data)
+    let name=req.body.name.toLowerCase()
+    let comment=req.body.comment.toLowerCase()
+    console.log(name)
+    console.log(comment)
+    const newComment= new Comment({name,comment})
     await newComment.save()
+    res.redirect("/feedback")
+    
+})
+app.post("/delete",async(req,res)=>{
+    let dataToDelete=req.body.comment.toLowerCase();
+    console.log(dataToDelete)
+    await Comment.deleteOne({name: dataToDelete})
+    
     res.redirect("/feedback")
     
 })
