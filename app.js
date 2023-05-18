@@ -36,11 +36,6 @@ app.set('views',views_dir)
 app.use(express.static(static_file))
 
 
-
-app.get("/test",(req,res)=>{
-    res.render("test")
-})
-
 app.get("/",(req,res)=>{
     res.render('home')
 })
@@ -152,8 +147,8 @@ app.post("/feedback",async(req,res)=>{
     res.redirect("/feedback")
     
 })
-app.get("/test",(req,res)=>{
-    res.render("test")
+app.get("/tests",(req,res)=>{
+    res.send({isHealthy: "Yes"})
 })
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
