@@ -6,14 +6,21 @@ const express= require("express")
 const PORT= 80;
 const app=express()
 const mongoose=require("mongoose")
+const bcrypt=require("bcrypt")
+const session=require("express-session")
 const Comment=require("./models/comments")
+const User=require("./models/users")
 const ipData=require("./public/js/ip-json.js")
 const weather=require("./public/js/weather.js")
 const t0=performance.now()
 
-mongoose.connect('mongodb://127.0.0.1:27017/Comments')
+
+app.use(session({secret: "notagoodsecret"}))
+
+
+mongoose.connect('mongodb://127.0.0.1:27017/Users')
     .then(()=>{
-        console.log("Mongoose connection estabilished")
+        console.log("Mongoose connection estabilished to Users db")
     })
     .catch(()=>{
         console.log("OOPS There is a mongoose error")
@@ -146,8 +153,14 @@ app.post("/feedback",async(req,res)=>{
     console.log(name)
     console.log(comment)
     const newComment= new Comment({name,comment})
-    await newComment.save()
-    res.redirect("/feedback")
+    await newComment.save().then(
+        res.redirect("feedback")
+    )
+    .catch((err)=>{
+        console.log("Error is :"+err)
+    })
+    
+    
     
 })
 app.post("/delete",async(req,res)=>{
@@ -158,9 +171,40 @@ app.post("/delete",async(req,res)=>{
     res.redirect("/feedback")
     
 })
-app.get("/tests",(req,res)=>{
-    res.send({isHealthy: "Yes"})
+app.get("/login",(req,res)=>{
+
+    res.render("login")
 })
+app.post("/login",async (req,res)=>{
+    console.log(req.body)
+    const {username, password}=req.body
+    const user=await User.findOne({username})
+    if(user){
+       const validPassword=await bcrypt.compare(password,user.password)
+       if(validPassword){
+          req.session.user_id=user._id
+          res.render("secret")
+       }
+    }
+    else {
+       res.send("Try Again bitch!")
+    }
+})
+app.get("/secret",(req,res)=>{
+    if(req.session.user_id){
+       res.render("secret");
+    }
+    else{
+       res.redirect("login")
+    }
+    
+ })
+app.post("/secret",(req,res)=>{
+    req.session.destroy()
+    res.redirect("login")
+})
+
+
 app.listen(PORT,()=>{
     console.log(`port is up on ${PORT}`)
 })
