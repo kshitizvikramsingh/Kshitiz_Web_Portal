@@ -198,6 +198,7 @@ app.post("/login",async (req,res)=>{
     console.log("found user!!"+user)
     if(user){
        const validPassword=await bcrypt.compare(password,user.password)
+       console.log(validPassword)
        if(validPassword){
         console.log("Password is correct!")
           req.session.user_id=user._id
