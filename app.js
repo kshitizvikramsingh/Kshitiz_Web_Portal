@@ -175,6 +175,22 @@ app.get("/login",(req,res)=>{
 
     res.render("login")
 })
+app.get("/register",(req,res)=>{
+
+    res.render("register")
+})
+app.post("/register",async(req,res)=>{
+    const {password,username}=req.body;
+    const hash=await bcrypt.hash(password,12);
+    const user=new User({
+     username,
+     password: hash
+    })
+    await user.save();
+    req.session.user_id=user._id
+    res.send("Usert registerede successfully!")
+    
+})
 app.post("/login",async (req,res)=>{
     console.log(req.body)
     const {username, password}=req.body
