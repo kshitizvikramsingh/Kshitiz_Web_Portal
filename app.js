@@ -195,6 +195,7 @@ app.post("/login",async (req,res)=>{
     console.log(req.body)
     const {username, password}=req.body
     const user=await User.findOne({username})
+    console.log("found user!!"+user)
     if(user){
        const validPassword=await bcrypt.compare(password,user.password)
        if(validPassword){
