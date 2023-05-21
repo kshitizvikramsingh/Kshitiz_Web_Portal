@@ -4,7 +4,7 @@ body {
     /* background-image: url("/img/stars.jpg"); */
     background-color: rgb(73, 70, 70);
     background-size:cover;
-    font-family: "Roboto";
+    
     text-shadow: 15px 15px 15px black;
     text-align: center;
     
@@ -147,4 +147,15 @@ p{
 }
 p img{
     text-align: center;
+}
+.card-text img{
+    width:60px;
+}
+.accordion .accordion-body{
+    color: aliceblue;
+    background-color: rgb(73, 70, 70);
+}
+.accordion .accordion-button{
+    color: aliceblue;
+    background-color: rgb(73, 70, 70);
 }
